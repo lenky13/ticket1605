@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>IT Help Desk Ticket</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff0f0;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .ticket {
+      background-color: #ffe5e5;
+      border: 2px solid #ff7b7b;
+      border-radius: 12px;
+      padding: 30px;
+      width: 400px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    h2 {
+      color: #c0392b;
+      margin-top: 0;
+    }
+    .section {
+      margin-bottom: 15px;
+    }
+    .label {
+      font-weight: bold;
+      color: #b03a2e;
+    }
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+    }
+    .button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .accept {
+      background-color: #27ae60;
+    }
+    .decline {
+      background-color: #c0392b;
+      position: relative;
+    }
+    #responseMessage {
+      margin-top: 20px;
+      font-style: italic;
+      color: #6e2c00;
+    }
+  </style>
+</head>
+<body>
+  <div class="ticket">
+    <h2>🎫 IT Help Desk Ticket</h2>
+    <div class="section">
+      <div class="label">Tip zahtjeva:</div>
+      Zahtjev za licencu i promjenu statusa
+    </div>
+    <div class="section">
+      <div class="label">Opis problema:</div>
+      Ne kužim zašto mi stalno izlazi error 143, sustav mi uporno traži status veze. Probala sam sve što znam a to je: klasični restart. Molim autorizaciju za trajnu licencu – treba mi nadogradnja statusa i redoviti updateovi.
+    </div>
+    <div class="button-container">
+      <button class="button accept" onclick="handleAccept()">✔️ Prihvaćam</button>
+      <button class="button decline" onclick="handleDecline()">❌ Odbijam</button>
+    </div>
+    <div id="responseMessage"></div>
+  </div>
+
+  <script>
+    let declineCount = 0;
+
+    function handleAccept() {
+      document.getElementById('responseMessage').innerText = "✅ Promjena statusa veze: cura";
+    }
+
+    function handleDecline() {
+      declineCount++;
+      if (declineCount === 1) {
+        document.getElementById('responseMessage').innerText = "🤔 Pitat ću te još dvaput.";
+      } else if (declineCount === 2) {
+        document.getElementById('responseMessage').innerText = "😬 Još samo jednom...";
+      } else {
+        document.getElementById('responseMessage').innerText = "💔 Žao mi je – sustav je u raspadu.";
+      }
+    }
+  </script>
+</body>
+</html>
