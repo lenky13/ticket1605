@@ -68,7 +68,7 @@
     </div>
     <div class="section">
       <div class="label">Opis problema:</div>
-      Ne kužim zašto mi stalno izlazi error 143, sustav mi uporno traži status veze. Probala sam sve što znam a to je: klasični restart. Molim autorizaciju za trajnu licencu – treba mi nadogradnja statusa i redoviti updateovi.
+      Ne kužim zašto mi stalno izlazi error 143, sustav mi uporno traži status veze. Probala sam sve što znam, a to je: klasični restart. Molim autorizaciju za trajnu licencu – treba mi nadogradnja statusa i redoviti updateovi.
     </div>
     <div class="button-container">
       <button class="button accept" onclick="handleAccept()">✔️ Prihvaćam</button>
